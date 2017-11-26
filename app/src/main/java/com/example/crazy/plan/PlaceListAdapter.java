@@ -16,22 +16,22 @@ import java.util.ArrayList;
 
 public class PlaceListAdapter extends BaseAdapter {
 
-    private ArrayList<Place> arrayListPlace;
-    private Context context;
+    private ArrayList<Place> mArrayListPlace;
+    private Context mContext;
 
     public PlaceListAdapter(Context context, ArrayList<Place> arrayListPlace) {
-        context = context;
-        arrayListPlace = arrayListPlace;
+        mContext = context;
+        mArrayListPlace = arrayListPlace;
     }
 
     @Override
     public int getCount() {
-        return arrayListPlace == null ? 0 : arrayListPlace.size();
+        return mArrayListPlace == null ? 0 : mArrayListPlace.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return arrayListPlace == null ? null : arrayListPlace.get(position);
+        return mArrayListPlace == null ? null : mArrayListPlace.get(position);
     }
 
     @Override
@@ -43,7 +43,7 @@ public class PlaceListAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         PlaceListAdapter.ViewHolder viewHolder = null;
         if (convertView == null) {
-            convertView = View.inflate(context, R.layout.item_place, null);
+            convertView = View.inflate(mContext, R.layout.item_place, null);
             viewHolder = new PlaceListAdapter.ViewHolder();
             viewHolder.tv_placeId = (TextView) convertView.findViewById(R.id.tv_placeId);
             viewHolder.tv_addr = (TextView) convertView.findViewById(R.id.tv_addr);
@@ -52,8 +52,8 @@ public class PlaceListAdapter extends BaseAdapter {
             viewHolder = (PlaceListAdapter.ViewHolder) convertView.getTag();
         }
 
-        viewHolder.tv_placeId.setText(arrayListPlace.get(position).getPlaceId());
-        viewHolder.tv_addr.setText(arrayListPlace.get(position).getAddr() + "");
+        viewHolder.tv_placeId.setText(mArrayListPlace.get(position).getPlaceId());
+        viewHolder.tv_addr.setText(mArrayListPlace.get(position).getAddr() + "");
 
         return convertView;
     }
