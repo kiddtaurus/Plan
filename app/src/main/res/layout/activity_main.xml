@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.crazy.plan.MainActivity">
+
+    <RelativeLayout android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+        <LinearLayout android:id="@+id/bottomBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true" >
+            <Button android:text="工作站点"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/button"/>
+            <Button android:text="站点"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:id="@+id/btnSite"/>
+        </LinearLayout>
+        <ListView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listV_content"
+            android:layout_margin="3dp"
+            android:layout_above="@id/bottomBtn"
+            android:background="#e0e0e0"/>
+    </RelativeLayout>
+</RelativeLayout>

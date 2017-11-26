@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_place_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff0022"
+    tools:context="com.example.crazy.plan.PlaceListActivity">
+
+    <ListView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listV_content"
+        android:layout_margin="3dp"
+        android:layout_above="@id/bottomBtn"
+        android:background="#e0e0e0"/>
+</RelativeLayout>
