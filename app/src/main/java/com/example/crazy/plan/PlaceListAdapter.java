@@ -52,7 +52,7 @@ public class PlaceListAdapter extends BaseAdapter {
             viewHolder = (PlaceListAdapter.ViewHolder) convertView.getTag();
         }
 
-        viewHolder.tv_placeId.setText(mArrayListPlace.get(position).getPlaceId());
+        viewHolder.tv_placeId.setText(mArrayListPlace.get(position).getPlaceId() + "");
         viewHolder.tv_addr.setText(mArrayListPlace.get(position).getAddr() + "");
 
         return convertView;
